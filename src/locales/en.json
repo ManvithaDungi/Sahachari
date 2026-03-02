@@ -1,0 +1,53 @@
+{
+   "home": {
+      "title": "Your health, your space",
+      "subtitle": "A safe space for women's health awareness",
+      "check_symptoms": "Check Symptoms",
+      "community": "Community Forum",
+      "remedies": "Home Remedies",
+      "journal": "My Journal",
+      "nearby": "Nearby Help"
+   },
+   "symptoms": {
+      "title": "How are you feeling?",
+      "subtitle": "Select symptoms you're experiencing today.",
+      "common_label": "Common Symptoms — tap to select",
+      "describe_label": "Describe in your words",
+      "placeholder": "Describe anything else you're experiencing...",
+      "analyze": "Analyze Symptoms",
+      "voice_label": "Tap to speak",
+      "voice_stop": "Tap to stop",
+      "selected": "symptoms selected"
+   },
+   "forum": {
+      "title": "Community",
+      "subtitle": "A safe space to share and listen",
+      "response_placeholder": "Share your experience or support...",
+      "post_button": "Post Anonymously"
+   },
+   "common": {
+      "disclaimer": "This is for awareness only. Not a medical diagnosis.",
+      "see_doctor": "Consult a Doctor",
+      "loading": "Please wait...",
+      "analyzing": "Analyzing...",
+      "error": "Something went wrong",
+      "logout": "Log Out"
+   },
+   "remedy": {
+      "title": "Home Remedy Checker",
+      "subtitle": "Science-backed verification for traditional wisdom.",
+      "enter_remedy": "Enter a remedy to verify",
+      "placeholder": "e.g., Ginger tea for nausea",
+      "check": "Check",
+      "checking": "Checking...",
+      "popular": "Popular Searches",
+      "verdict": "Verdict",
+      "explanation": "Explanation",
+      "scientific": "Scientific Backing",
+      "tip": "Health Tip",
+      "consulting": "Consulting medical database...",
+      "example1": "Jeera water for PCOS",
+      "example2": "Turmeric milk for cramps",
+      "example3": "Sesame seeds for periods"
+   }
+}

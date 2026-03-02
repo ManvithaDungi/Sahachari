@@ -1,0 +1,47 @@
+type User @table {
+  username: String!
+  email: String!
+  createdAt: Timestamp!
+  hashedPassword: String
+  lastLoginAt: Timestamp
+}
+
+type SymptomLog @table {
+  user: User!
+  symptomName: String!
+  severity: Int!
+  logDate: Date!
+  createdAt: Timestamp!
+  notes: String
+  AIAnalysisResult: String
+}
+
+type ForumPost @table {
+  user: User!
+  title: String!
+  content: String!
+  topic: String!
+  createdAt: Timestamp!
+  parentPost: ForumPost
+  isAnonymous: Boolean
+}
+
+type VerifiedRemedy @table {
+  name: String!
+  description: String!
+  category: String!
+  createdAt: Timestamp!
+  ingredients: String
+  preparationInstructions: String
+  scientificEvidenceLink: String
+}
+
+type HealthJournalEntry @table {
+  user: User!
+  title: String!
+  content: String!
+  entryDate: Date!
+  createdAt: Timestamp!
+  tags: [String]
+  mood: String
+}

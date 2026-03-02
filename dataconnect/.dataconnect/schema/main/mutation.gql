@@ -1,0 +1,562 @@
+extend type Mutation {
+  """
+  ✨ Insert a single `ForumPost` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  forumPost_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: ForumPost_Data!
+  ): ForumPost_KeyOutput! @fdc_generated(from: "ForumPost", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `HealthJournalEntry` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  healthJournalEntry_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: HealthJournalEntry_Data!
+  ): HealthJournalEntry_KeyOutput! @fdc_generated(from: "HealthJournalEntry", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `SymptomLog` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  symptomLog_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: SymptomLog_Data!
+  ): SymptomLog_KeyOutput! @fdc_generated(from: "SymptomLog", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `User` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  user_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: User_Data!
+  ): User_KeyOutput! @fdc_generated(from: "User", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert a single `VerifiedRemedy` into the table and return its key. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  verifiedRemedy_insert(
+    """
+    Data object to insert into the table.
+    """
+    data: VerifiedRemedy_Data!
+  ): VerifiedRemedy_KeyOutput! @fdc_generated(from: "VerifiedRemedy", purpose: INSERT_SINGLE)
+  """
+  ✨ Insert `ForumPost` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  forumPost_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [ForumPost_Data!]!
+  ): [ForumPost_KeyOutput!]! @fdc_generated(from: "ForumPost", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `HealthJournalEntry` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  healthJournalEntry_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [HealthJournalEntry_Data!]!
+  ): [HealthJournalEntry_KeyOutput!]! @fdc_generated(from: "HealthJournalEntry", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `SymptomLog` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  symptomLog_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [SymptomLog_Data!]!
+  ): [SymptomLog_KeyOutput!]! @fdc_generated(from: "SymptomLog", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `User` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  user_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [User_Data!]!
+  ): [User_KeyOutput!]! @fdc_generated(from: "User", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert `VerifiedRemedy` objects into the table and return their keys. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  verifiedRemedy_insertMany(
+    """
+    List of data objects to insert into the table.
+    """
+    data: [VerifiedRemedy_Data!]!
+  ): [VerifiedRemedy_KeyOutput!]! @fdc_generated(from: "VerifiedRemedy", purpose: INSERT_MULTIPLE)
+  """
+  ✨ Insert or update a single `ForumPost` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `ForumPost`.
+  """
+  forumPost_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: ForumPost_Data!
+  ): ForumPost_KeyOutput! @fdc_generated(from: "ForumPost", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `HealthJournalEntry` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `HealthJournalEntry`.
+  """
+  healthJournalEntry_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: HealthJournalEntry_Data!
+  ): HealthJournalEntry_KeyOutput! @fdc_generated(from: "HealthJournalEntry", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `SymptomLog` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `SymptomLog`.
+  """
+  symptomLog_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: SymptomLog_Data!
+  ): SymptomLog_KeyOutput! @fdc_generated(from: "SymptomLog", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `User` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `User`.
+  """
+  user_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: User_Data!
+  ): User_KeyOutput! @fdc_generated(from: "User", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update a single `VerifiedRemedy` into the table, based on the primary key. Returns the key of the newly inserted or existing updated `VerifiedRemedy`.
+  """
+  verifiedRemedy_upsert(
+    """
+    Data object to insert or update if it already exists.
+    """
+    data: VerifiedRemedy_Data!
+  ): VerifiedRemedy_KeyOutput! @fdc_generated(from: "VerifiedRemedy", purpose: UPSERT_SINGLE)
+  """
+  ✨ Insert or update `ForumPost` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `ForumPost`.
+  """
+  forumPost_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [ForumPost_Data!]!
+  ): [ForumPost_KeyOutput!]! @fdc_generated(from: "ForumPost", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `HealthJournalEntry` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `HealthJournalEntry`.
+  """
+  healthJournalEntry_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [HealthJournalEntry_Data!]!
+  ): [HealthJournalEntry_KeyOutput!]! @fdc_generated(from: "HealthJournalEntry", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `SymptomLog` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `SymptomLog`.
+  """
+  symptomLog_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [SymptomLog_Data!]!
+  ): [SymptomLog_KeyOutput!]! @fdc_generated(from: "SymptomLog", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `User` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `User`.
+  """
+  user_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [User_Data!]!
+  ): [User_KeyOutput!]! @fdc_generated(from: "User", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Insert or update `VerifiedRemedy` objects into the table, based on the primary key. Returns the key of the newly inserted or existing updated `VerifiedRemedy`.
+  """
+  verifiedRemedy_upsertMany(
+    """
+    List of data objects to insert or update if it already exists.
+    """
+    data: [VerifiedRemedy_Data!]!
+  ): [VerifiedRemedy_KeyOutput!]! @fdc_generated(from: "VerifiedRemedy", purpose: UPSERT_MULTIPLE)
+  """
+  ✨ Update a single `ForumPost` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `ForumPost` or `null` if not found.
+  """
+  forumPost_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: ForumPost_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: ForumPost_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: ForumPost_Data!
+  ): ForumPost_KeyOutput @fdc_generated(from: "ForumPost", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `HealthJournalEntry` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `HealthJournalEntry` or `null` if not found.
+  """
+  healthJournalEntry_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: HealthJournalEntry_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: HealthJournalEntry_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: HealthJournalEntry_Data!
+  ): HealthJournalEntry_KeyOutput @fdc_generated(from: "HealthJournalEntry", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `SymptomLog` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `SymptomLog` or `null` if not found.
+  """
+  symptomLog_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: SymptomLog_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: SymptomLog_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: SymptomLog_Data!
+  ): SymptomLog_KeyOutput @fdc_generated(from: "SymptomLog", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `User` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `User` or `null` if not found.
+  """
+  user_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: User_Data!
+  ): User_KeyOutput @fdc_generated(from: "User", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update a single `VerifiedRemedy` based on `id`, `key` or `first`, setting columns specified in `data`. Returns the key of the updated `VerifiedRemedy` or `null` if not found.
+  """
+  verifiedRemedy_update(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: VerifiedRemedy_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: VerifiedRemedy_FirstRow
+
+    """
+    Data object containing fields to be updated.
+    """
+    data: VerifiedRemedy_Data!
+  ): VerifiedRemedy_KeyOutput @fdc_generated(from: "VerifiedRemedy", purpose: UPDATE_SINGLE)
+  """
+  ✨ Update `ForumPost` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  forumPost_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: ForumPost_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: ForumPost_Data!
+  ): Int! @fdc_generated(from: "ForumPost", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `HealthJournalEntry` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  healthJournalEntry_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: HealthJournalEntry_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: HealthJournalEntry_Data!
+  ): Int! @fdc_generated(from: "HealthJournalEntry", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `SymptomLog` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  symptomLog_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: SymptomLog_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: SymptomLog_Data!
+  ): Int! @fdc_generated(from: "SymptomLog", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `User` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  user_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: User_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: User_Data!
+  ): Int! @fdc_generated(from: "User", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Update `VerifiedRemedy` objects matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  verifiedRemedy_updateMany(
+    """
+    Filter condition to specify which rows to update.
+    """
+    where: VerifiedRemedy_Filter
+
+    """
+    Set to true to update all rows.
+    """
+    all: Boolean = false
+
+    """
+    Data object containing fields to update.
+    """
+    data: VerifiedRemedy_Data!
+  ): Int! @fdc_generated(from: "VerifiedRemedy", purpose: UPDATE_MULTIPLE)
+  """
+  ✨ Delete a single `ForumPost` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  forumPost_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: ForumPost_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: ForumPost_FirstRow
+  ): ForumPost_KeyOutput @fdc_generated(from: "ForumPost", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `HealthJournalEntry` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  healthJournalEntry_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: HealthJournalEntry_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: HealthJournalEntry_FirstRow
+  ): HealthJournalEntry_KeyOutput @fdc_generated(from: "HealthJournalEntry", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `SymptomLog` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  symptomLog_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: SymptomLog_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: SymptomLog_FirstRow
+  ): SymptomLog_KeyOutput @fdc_generated(from: "SymptomLog", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `User` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  user_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+  ): User_KeyOutput @fdc_generated(from: "User", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete a single `VerifiedRemedy` based on `id`, `key` or `first` and return its key (or `null` if not found).
+  """
+  verifiedRemedy_delete(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: VerifiedRemedy_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: VerifiedRemedy_FirstRow
+  ): VerifiedRemedy_KeyOutput @fdc_generated(from: "VerifiedRemedy", purpose: DELETE_SINGLE)
+  """
+  ✨ Delete `ForumPost` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  forumPost_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: ForumPost_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "ForumPost", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `HealthJournalEntry` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  healthJournalEntry_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: HealthJournalEntry_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "HealthJournalEntry", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `SymptomLog` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  symptomLog_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: SymptomLog_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "SymptomLog", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `User` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  user_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: User_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "User", purpose: DELETE_MULTIPLE)
+  """
+  ✨ Delete `VerifiedRemedy` objects matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  verifiedRemedy_deleteMany(
+    """
+    Filter condition to specify which rows to delete.
+    """
+    where: VerifiedRemedy_Filter
+
+    """
+    Set to true to delete all rows.
+    """
+    all: Boolean = false
+  ): Int! @fdc_generated(from: "VerifiedRemedy", purpose: DELETE_MULTIPLE)
+}

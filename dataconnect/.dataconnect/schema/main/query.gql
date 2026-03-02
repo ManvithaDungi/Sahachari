@@ -1,0 +1,267 @@
+extend type Query {
+  """
+  ✨ Look up a single `ForumPost` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  forumPost(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: ForumPost_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: ForumPost_FirstRow
+  ): ForumPost @fdc_generated(from: "ForumPost", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `HealthJournalEntry` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  healthJournalEntry(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: HealthJournalEntry_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: HealthJournalEntry_FirstRow
+  ): HealthJournalEntry @fdc_generated(from: "HealthJournalEntry", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `SymptomLog` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  symptomLog(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: SymptomLog_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: SymptomLog_FirstRow
+  ): SymptomLog @fdc_generated(from: "SymptomLog", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `User` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  user(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: User_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: User_FirstRow
+  ): User @fdc_generated(from: "User", purpose: QUERY_SINGLE)
+  """
+  ✨ Look up a single `VerifiedRemedy` based on `id`, `key` or `first` and return selected fields (or `null` if not found).
+  """
+  verifiedRemedy(
+    """
+    The unique ID of the object.
+    """
+    id: UUID
+
+    """
+    The key used to identify the object.
+    """
+    key: VerifiedRemedy_Key
+
+    """
+    Fetch the first row based on the filters and ordering.
+    """
+    first: VerifiedRemedy_FirstRow
+  ): VerifiedRemedy @fdc_generated(from: "VerifiedRemedy", purpose: QUERY_SINGLE)
+  """
+  ✨ List `ForumPost` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  forumPosts(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: ForumPost_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [ForumPost_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: ForumPost_Having
+  ): [ForumPost!]! @fdc_generated(from: "ForumPost", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `HealthJournalEntry` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  healthJournalEntries(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: HealthJournalEntry_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [HealthJournalEntry_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: HealthJournalEntry_Having
+  ): [HealthJournalEntry!]! @fdc_generated(from: "HealthJournalEntry", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `SymptomLog` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  symptomLogs(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: SymptomLog_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [SymptomLog_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: SymptomLog_Having
+  ): [SymptomLog!]! @fdc_generated(from: "SymptomLog", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `User` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  users(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: User_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [User_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: User_Having
+  ): [User!]! @fdc_generated(from: "User", purpose: QUERY_MULTIPLE)
+  """
+  ✨ List `VerifiedRemedy` objects in the table and return selected fields, optionally filtered by `where` conditions
+  """
+  verifiedRemedies(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: VerifiedRemedy_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [VerifiedRemedy_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: VerifiedRemedy_Having
+  ): [VerifiedRemedy!]! @fdc_generated(from: "VerifiedRemedy", purpose: QUERY_MULTIPLE)
+}

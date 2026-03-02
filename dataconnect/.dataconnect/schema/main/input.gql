@@ -1,0 +1,1697 @@
+"""
+✨ `ForumPost_KeyOutput` returns the primary key fields of table type `ForumPost`.
+
+It has the same format as `ForumPost_Key`, but is only used as mutation return value.
+"""
+scalar ForumPost_KeyOutput
+"""
+✨ `HealthJournalEntry_KeyOutput` returns the primary key fields of table type `HealthJournalEntry`.
+
+It has the same format as `HealthJournalEntry_Key`, but is only used as mutation return value.
+"""
+scalar HealthJournalEntry_KeyOutput
+"""
+✨ `SymptomLog_KeyOutput` returns the primary key fields of table type `SymptomLog`.
+
+It has the same format as `SymptomLog_Key`, but is only used as mutation return value.
+"""
+scalar SymptomLog_KeyOutput
+"""
+✨ `User_KeyOutput` returns the primary key fields of table type `User`.
+
+It has the same format as `User_Key`, but is only used as mutation return value.
+"""
+scalar User_KeyOutput
+"""
+✨ `VerifiedRemedy_KeyOutput` returns the primary key fields of table type `VerifiedRemedy`.
+
+It has the same format as `VerifiedRemedy_Key`, but is only used as mutation return value.
+"""
+scalar VerifiedRemedy_KeyOutput
+"""
+✨ Generated data input type for table 'ForumPost'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input ForumPost_Data {
+  """
+  ✨ Generated from Field `ForumPost`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `ForumPost`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `ForumPost`.`parentPostId` of type `UUID`
+  """
+  parentPostId: UUID
+  """
+  ✨ `_expr` server value variant of `parentPostId` (✨ Generated from Field `ForumPost`.`parentPostId` of type `UUID`)
+  """
+  parentPostId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `ForumPost`.`userId` of type `UUID!`
+  """
+  userId: UUID
+  """
+  ✨ `_expr` server value variant of `userId` (✨ Generated from Field `ForumPost`.`userId` of type `UUID!`)
+  """
+  userId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `ForumPost`.`parentPost` of type `ForumPost`
+  """
+  parentPost: ForumPost_Key
+  """
+  ✨ Generated from Field `ForumPost`.`user` of type `User!`
+  """
+  user: User_Key
+  """
+  ✨ Generated from Field `ForumPost`.`content` of type `String!`
+  """
+  content: String
+  """
+  ✨ `_expr` server value variant of `content` (✨ Generated from Field `ForumPost`.`content` of type `String!`)
+  """
+  content_expr: String_Expr
+  """
+  ✨ Generated from Field `ForumPost`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `ForumPost`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `ForumPost`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `ForumPost`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `ForumPost`.`isAnonymous` of type `Boolean`
+  """
+  isAnonymous: Boolean
+  """
+  ✨ `_expr` server value variant of `isAnonymous` (✨ Generated from Field `ForumPost`.`isAnonymous` of type `Boolean`)
+  """
+  isAnonymous_expr: Boolean_Expr
+  """
+  ✨ Generated from Field `ForumPost`.`title` of type `String!`
+  """
+  title: String
+  """
+  ✨ `_expr` server value variant of `title` (✨ Generated from Field `ForumPost`.`title` of type `String!`)
+  """
+  title_expr: String_Expr
+  """
+  ✨ Generated from Field `ForumPost`.`topic` of type `String!`
+  """
+  topic: String
+  """
+  ✨ `_expr` server value variant of `topic` (✨ Generated from Field `ForumPost`.`topic` of type `String!`)
+  """
+  topic_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'ForumPost'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input ForumPost_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [ForumPost_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: ForumPost_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [ForumPost_Filter!]
+  """
+  ✨ Generated from Field `ForumPost`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`parentPostId` of type `UUID`
+  """
+  parentPostId: UUID_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`userId` of type `UUID!`
+  """
+  userId: UUID_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`parentPost` of type `ForumPost`
+  """
+  parentPost: ForumPost_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`user` of type `User!`
+  """
+  user: User_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`content` of type `String!`
+  """
+  content: String_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`isAnonymous` of type `Boolean`
+  """
+  isAnonymous: Boolean_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`title` of type `String!`
+  """
+  title: String_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`topic` of type `String!`
+  """
+  topic: String_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`forumPosts_on_parentPost` of type `[ForumPost!]!`
+  """
+  forumPosts_on_parentPost: ForumPost_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'ForumPost'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input ForumPost_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [ForumPost_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: ForumPost_Filter
+}
+"""
+✨ Generated having input type for table 'ForumPost'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input ForumPost_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [ForumPost_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: ForumPost_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [ForumPost_Having!]
+  """
+  ✨ Generated from Field `ForumPost`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`content_count` of type `Int!`
+  """
+  content_count: Int_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`isAnonymous_count` of type `Int!`
+  """
+  isAnonymous_count: Int_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`parentPostId_count` of type `Int!`
+  """
+  parentPostId_count: Int_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`title_count` of type `Int!`
+  """
+  title_count: Int_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`topic_count` of type `Int!`
+  """
+  topic_count: Int_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`userId_count` of type `Int!`
+  """
+  userId_count: Int_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `ForumPost`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+}
+"""
+✨ Generated key input type for table 'ForumPost'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input ForumPost_Key {
+  """
+  ✨ Generated from Field `ForumPost`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `ForumPost`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'ForumPost'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input ForumPost_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: ForumPost_Filter
+}
+"""
+✨ Generated order input type for table 'ForumPost'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input ForumPost_Order {
+  """
+  ✨ Generated from Field `ForumPost`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `ForumPost`.`parentPostId` of type `UUID`
+  """
+  parentPostId: OrderDirection
+  """
+  ✨ Generated from Field `ForumPost`.`userId` of type `UUID!`
+  """
+  userId: OrderDirection
+  """
+  ✨ Generated from Field `ForumPost`.`parentPost` of type `ForumPost`
+  """
+  parentPost: ForumPost_Order
+  """
+  ✨ Generated from Field `ForumPost`.`user` of type `User!`
+  """
+  user: User_Order
+  """
+  ✨ Generated from Field `ForumPost`.`content` of type `String!`
+  """
+  content: OrderDirection
+  """
+  ✨ Generated from Field `ForumPost`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `ForumPost`.`isAnonymous` of type `Boolean`
+  """
+  isAnonymous: OrderDirection
+  """
+  ✨ Generated from Field `ForumPost`.`title` of type `String!`
+  """
+  title: OrderDirection
+  """
+  ✨ Generated from Field `ForumPost`.`topic` of type `String!`
+  """
+  topic: OrderDirection
+  """
+  ✨ Generated from Field `ForumPost`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `ForumPost`.`content_count` of type `Int!`
+  """
+  content_count: OrderDirection
+  """
+  ✨ Generated from Field `ForumPost`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `ForumPost`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `ForumPost`.`isAnonymous_count` of type `Int!`
+  """
+  isAnonymous_count: OrderDirection
+  """
+  ✨ Generated from Field `ForumPost`.`parentPostId_count` of type `Int!`
+  """
+  parentPostId_count: OrderDirection
+  """
+  ✨ Generated from Field `ForumPost`.`title_count` of type `Int!`
+  """
+  title_count: OrderDirection
+  """
+  ✨ Generated from Field `ForumPost`.`topic_count` of type `Int!`
+  """
+  topic_count: OrderDirection
+  """
+  ✨ Generated from Field `ForumPost`.`userId_count` of type `Int!`
+  """
+  userId_count: OrderDirection
+  """
+  ✨ Generated from Field `ForumPost`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `ForumPost`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'HealthJournalEntry'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input HealthJournalEntry_Data {
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `HealthJournalEntry`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`userId` of type `UUID!`
+  """
+  userId: UUID
+  """
+  ✨ `_expr` server value variant of `userId` (✨ Generated from Field `HealthJournalEntry`.`userId` of type `UUID!`)
+  """
+  userId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`user` of type `User!`
+  """
+  user: User_Key
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`content` of type `String!`
+  """
+  content: String
+  """
+  ✨ `_expr` server value variant of `content` (✨ Generated from Field `HealthJournalEntry`.`content` of type `String!`)
+  """
+  content_expr: String_Expr
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `HealthJournalEntry`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `HealthJournalEntry`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `HealthJournalEntry`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`entryDate` of type `Date!`
+  """
+  entryDate: Date
+  """
+  ✨ `_date` server value variant of `entryDate` (✨ Generated from Field `HealthJournalEntry`.`entryDate` of type `Date!`)
+  """
+  entryDate_date: Date_Relative
+  """
+  ✨ `_expr` server value variant of `entryDate` (✨ Generated from Field `HealthJournalEntry`.`entryDate` of type `Date!`)
+  """
+  entryDate_expr: Date_Expr
+  """
+  ✨ `_update` server value variant of `entryDate` (✨ Generated from Field `HealthJournalEntry`.`entryDate` of type `Date!`)
+  """
+  entryDate_update: [Date_Update!]
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`mood` of type `String`
+  """
+  mood: String
+  """
+  ✨ `_expr` server value variant of `mood` (✨ Generated from Field `HealthJournalEntry`.`mood` of type `String`)
+  """
+  mood_expr: String_Expr
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`tags` of type `[String]`
+  """
+  tags: [String!]
+  """
+  ✨ `_update` server value variant of `tags` (✨ Generated from Field `HealthJournalEntry`.`tags` of type `[String]`)
+  """
+  tags_update: [String_ListUpdate!]
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`title` of type `String!`
+  """
+  title: String
+  """
+  ✨ `_expr` server value variant of `title` (✨ Generated from Field `HealthJournalEntry`.`title` of type `String!`)
+  """
+  title_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'HealthJournalEntry'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input HealthJournalEntry_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [HealthJournalEntry_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: HealthJournalEntry_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [HealthJournalEntry_Filter!]
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`userId` of type `UUID!`
+  """
+  userId: UUID_Filter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`user` of type `User!`
+  """
+  user: User_Filter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`content` of type `String!`
+  """
+  content: String_Filter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`entryDate` of type `Date!`
+  """
+  entryDate: Date_Filter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`mood` of type `String`
+  """
+  mood: String_Filter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`tags` of type `[String]`
+  """
+  tags: String_ListFilter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`title` of type `String!`
+  """
+  title: String_Filter
+}
+"""
+✨ Generated first-row input type for table 'HealthJournalEntry'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input HealthJournalEntry_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [HealthJournalEntry_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: HealthJournalEntry_Filter
+}
+"""
+✨ Generated having input type for table 'HealthJournalEntry'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input HealthJournalEntry_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [HealthJournalEntry_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: HealthJournalEntry_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [HealthJournalEntry_Having!]
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`content_count` of type `Int!`
+  """
+  content_count: Int_Filter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`entryDate_count` of type `Int!`
+  """
+  entryDate_count: Int_Filter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`mood_count` of type `Int!`
+  """
+  mood_count: Int_Filter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`title_count` of type `Int!`
+  """
+  title_count: Int_Filter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`userId_count` of type `Int!`
+  """
+  userId_count: Int_Filter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`entryDate_min` of type `Date`
+  """
+  entryDate_min: Date_Filter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`entryDate_max` of type `Date`
+  """
+  entryDate_max: Date_Filter
+}
+"""
+✨ Generated key input type for table 'HealthJournalEntry'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input HealthJournalEntry_Key {
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `HealthJournalEntry`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'HealthJournalEntry'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input HealthJournalEntry_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: HealthJournalEntry_Filter
+}
+"""
+✨ Generated order input type for table 'HealthJournalEntry'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input HealthJournalEntry_Order {
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`userId` of type `UUID!`
+  """
+  userId: OrderDirection
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`user` of type `User!`
+  """
+  user: User_Order
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`content` of type `String!`
+  """
+  content: OrderDirection
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`entryDate` of type `Date!`
+  """
+  entryDate: OrderDirection
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`mood` of type `String`
+  """
+  mood: OrderDirection
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`title` of type `String!`
+  """
+  title: OrderDirection
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`content_count` of type `Int!`
+  """
+  content_count: OrderDirection
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`entryDate_count` of type `Int!`
+  """
+  entryDate_count: OrderDirection
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`mood_count` of type `Int!`
+  """
+  mood_count: OrderDirection
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`title_count` of type `Int!`
+  """
+  title_count: OrderDirection
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`userId_count` of type `Int!`
+  """
+  userId_count: OrderDirection
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`entryDate_min` of type `Date`
+  """
+  entryDate_min: OrderDirection
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+  """
+  ✨ Generated from Field `HealthJournalEntry`.`entryDate_max` of type `Date`
+  """
+  entryDate_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'SymptomLog'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input SymptomLog_Data {
+  """
+  ✨ Generated from Field `SymptomLog`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `SymptomLog`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `SymptomLog`.`userId` of type `UUID!`
+  """
+  userId: UUID
+  """
+  ✨ `_expr` server value variant of `userId` (✨ Generated from Field `SymptomLog`.`userId` of type `UUID!`)
+  """
+  userId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `SymptomLog`.`user` of type `User!`
+  """
+  user: User_Key
+  """
+  ✨ Generated from Field `SymptomLog`.`AIAnalysisResult` of type `String`
+  """
+  AIAnalysisResult: String
+  """
+  ✨ `_expr` server value variant of `AIAnalysisResult` (✨ Generated from Field `SymptomLog`.`AIAnalysisResult` of type `String`)
+  """
+  AIAnalysisResult_expr: String_Expr
+  """
+  ✨ Generated from Field `SymptomLog`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `SymptomLog`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `SymptomLog`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `SymptomLog`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `SymptomLog`.`logDate` of type `Date!`
+  """
+  logDate: Date
+  """
+  ✨ `_date` server value variant of `logDate` (✨ Generated from Field `SymptomLog`.`logDate` of type `Date!`)
+  """
+  logDate_date: Date_Relative
+  """
+  ✨ `_expr` server value variant of `logDate` (✨ Generated from Field `SymptomLog`.`logDate` of type `Date!`)
+  """
+  logDate_expr: Date_Expr
+  """
+  ✨ `_update` server value variant of `logDate` (✨ Generated from Field `SymptomLog`.`logDate` of type `Date!`)
+  """
+  logDate_update: [Date_Update!]
+  """
+  ✨ Generated from Field `SymptomLog`.`notes` of type `String`
+  """
+  notes: String
+  """
+  ✨ `_expr` server value variant of `notes` (✨ Generated from Field `SymptomLog`.`notes` of type `String`)
+  """
+  notes_expr: String_Expr
+  """
+  ✨ Generated from Field `SymptomLog`.`severity` of type `Int!`
+  """
+  severity: Int
+  """
+  ✨ `_expr` server value variant of `severity` (✨ Generated from Field `SymptomLog`.`severity` of type `Int!`)
+  """
+  severity_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `severity` (✨ Generated from Field `SymptomLog`.`severity` of type `Int!`)
+  """
+  severity_update: [Int_Update!]
+  """
+  ✨ Generated from Field `SymptomLog`.`symptomName` of type `String!`
+  """
+  symptomName: String
+  """
+  ✨ `_expr` server value variant of `symptomName` (✨ Generated from Field `SymptomLog`.`symptomName` of type `String!`)
+  """
+  symptomName_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'SymptomLog'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input SymptomLog_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [SymptomLog_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: SymptomLog_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [SymptomLog_Filter!]
+  """
+  ✨ Generated from Field `SymptomLog`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`userId` of type `UUID!`
+  """
+  userId: UUID_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`user` of type `User!`
+  """
+  user: User_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`AIAnalysisResult` of type `String`
+  """
+  AIAnalysisResult: String_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`logDate` of type `Date!`
+  """
+  logDate: Date_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`notes` of type `String`
+  """
+  notes: String_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`severity` of type `Int!`
+  """
+  severity: Int_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`symptomName` of type `String!`
+  """
+  symptomName: String_Filter
+}
+"""
+✨ Generated first-row input type for table 'SymptomLog'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input SymptomLog_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [SymptomLog_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: SymptomLog_Filter
+}
+"""
+✨ Generated having input type for table 'SymptomLog'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input SymptomLog_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [SymptomLog_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: SymptomLog_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [SymptomLog_Having!]
+  """
+  ✨ Generated from Field `SymptomLog`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`AIAnalysisResult_count` of type `Int!`
+  """
+  AIAnalysisResult_count: Int_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`logDate_count` of type `Int!`
+  """
+  logDate_count: Int_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`notes_count` of type `Int!`
+  """
+  notes_count: Int_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`severity_count` of type `Int!`
+  """
+  severity_count: Int_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`symptomName_count` of type `Int!`
+  """
+  symptomName_count: Int_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`userId_count` of type `Int!`
+  """
+  userId_count: Int_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`severity_sum` of type `Int`
+  """
+  severity_sum: Int_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`severity_avg` of type `Float`
+  """
+  severity_avg: Float_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`logDate_min` of type `Date`
+  """
+  logDate_min: Date_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`severity_min` of type `Int`
+  """
+  severity_min: Int_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`logDate_max` of type `Date`
+  """
+  logDate_max: Date_Filter
+  """
+  ✨ Generated from Field `SymptomLog`.`severity_max` of type `Int`
+  """
+  severity_max: Int_Filter
+}
+"""
+✨ Generated key input type for table 'SymptomLog'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input SymptomLog_Key {
+  """
+  ✨ Generated from Field `SymptomLog`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `SymptomLog`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'SymptomLog'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input SymptomLog_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: SymptomLog_Filter
+}
+"""
+✨ Generated order input type for table 'SymptomLog'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input SymptomLog_Order {
+  """
+  ✨ Generated from Field `SymptomLog`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`userId` of type `UUID!`
+  """
+  userId: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`user` of type `User!`
+  """
+  user: User_Order
+  """
+  ✨ Generated from Field `SymptomLog`.`AIAnalysisResult` of type `String`
+  """
+  AIAnalysisResult: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`logDate` of type `Date!`
+  """
+  logDate: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`notes` of type `String`
+  """
+  notes: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`severity` of type `Int!`
+  """
+  severity: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`symptomName` of type `String!`
+  """
+  symptomName: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`AIAnalysisResult_count` of type `Int!`
+  """
+  AIAnalysisResult_count: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`logDate_count` of type `Int!`
+  """
+  logDate_count: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`notes_count` of type `Int!`
+  """
+  notes_count: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`severity_count` of type `Int!`
+  """
+  severity_count: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`symptomName_count` of type `Int!`
+  """
+  symptomName_count: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`userId_count` of type `Int!`
+  """
+  userId_count: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`severity_sum` of type `Int`
+  """
+  severity_sum: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`severity_avg` of type `Float`
+  """
+  severity_avg: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`logDate_min` of type `Date`
+  """
+  logDate_min: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`severity_min` of type `Int`
+  """
+  severity_min: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`logDate_max` of type `Date`
+  """
+  logDate_max: OrderDirection
+  """
+  ✨ Generated from Field `SymptomLog`.`severity_max` of type `Int`
+  """
+  severity_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'User'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input User_Data {
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `User`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `User`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `User`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `User`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `User`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `User`.`email` of type `String!`
+  """
+  email: String
+  """
+  ✨ `_expr` server value variant of `email` (✨ Generated from Field `User`.`email` of type `String!`)
+  """
+  email_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`hashedPassword` of type `String`
+  """
+  hashedPassword: String
+  """
+  ✨ `_expr` server value variant of `hashedPassword` (✨ Generated from Field `User`.`hashedPassword` of type `String`)
+  """
+  hashedPassword_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`lastLoginAt` of type `Timestamp`
+  """
+  lastLoginAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `lastLoginAt` (✨ Generated from Field `User`.`lastLoginAt` of type `Timestamp`)
+  """
+  lastLoginAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `lastLoginAt` (✨ Generated from Field `User`.`lastLoginAt` of type `Timestamp`)
+  """
+  lastLoginAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `lastLoginAt` (✨ Generated from Field `User`.`lastLoginAt` of type `Timestamp`)
+  """
+  lastLoginAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `User`.`username` of type `String!`
+  """
+  username: String
+  """
+  ✨ `_expr` server value variant of `username` (✨ Generated from Field `User`.`username` of type `String!`)
+  """
+  username_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'User'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input User_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [User_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: User_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [User_Filter!]
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `User`.`email` of type `String!`
+  """
+  email: String_Filter
+  """
+  ✨ Generated from Field `User`.`hashedPassword` of type `String`
+  """
+  hashedPassword: String_Filter
+  """
+  ✨ Generated from Field `User`.`lastLoginAt` of type `Timestamp`
+  """
+  lastLoginAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `User`.`username` of type `String!`
+  """
+  username: String_Filter
+  """
+  ✨ Generated from Field `User`.`forumPosts_on_user` of type `[ForumPost!]!`
+  """
+  forumPosts_on_user: ForumPost_ListFilter
+  """
+  ✨ Generated from Field `User`.`healthJournalEntries_on_user` of type `[HealthJournalEntry!]!`
+  """
+  healthJournalEntries_on_user: HealthJournalEntry_ListFilter
+  """
+  ✨ Generated from Field `User`.`symptomLogs_on_user` of type `[SymptomLog!]!`
+  """
+  symptomLogs_on_user: SymptomLog_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'User'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input User_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [User_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: User_Filter
+}
+"""
+✨ Generated having input type for table 'User'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input User_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [User_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: User_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [User_Having!]
+  """
+  ✨ Generated from Field `User`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`email_count` of type `Int!`
+  """
+  email_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`hashedPassword_count` of type `Int!`
+  """
+  hashedPassword_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`lastLoginAt_count` of type `Int!`
+  """
+  lastLoginAt_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`username_count` of type `Int!`
+  """
+  username_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `User`.`lastLoginAt_min` of type `Timestamp`
+  """
+  lastLoginAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `User`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+  """
+  ✨ Generated from Field `User`.`lastLoginAt_max` of type `Timestamp`
+  """
+  lastLoginAt_max: Timestamp_Filter
+}
+"""
+✨ Generated key input type for table 'User'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input User_Key {
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `User`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'User'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input User_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: User_Filter
+}
+"""
+✨ Generated order input type for table 'User'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input User_Order {
+  """
+  ✨ Generated from Field `User`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `User`.`email` of type `String!`
+  """
+  email: OrderDirection
+  """
+  ✨ Generated from Field `User`.`hashedPassword` of type `String`
+  """
+  hashedPassword: OrderDirection
+  """
+  ✨ Generated from Field `User`.`lastLoginAt` of type `Timestamp`
+  """
+  lastLoginAt: OrderDirection
+  """
+  ✨ Generated from Field `User`.`username` of type `String!`
+  """
+  username: OrderDirection
+  """
+  ✨ Generated from Field `User`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`email_count` of type `Int!`
+  """
+  email_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`hashedPassword_count` of type `Int!`
+  """
+  hashedPassword_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`lastLoginAt_count` of type `Int!`
+  """
+  lastLoginAt_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`username_count` of type `Int!`
+  """
+  username_count: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `User`.`lastLoginAt_min` of type `Timestamp`
+  """
+  lastLoginAt_min: OrderDirection
+  """
+  ✨ Generated from Field `User`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+  """
+  ✨ Generated from Field `User`.`lastLoginAt_max` of type `Timestamp`
+  """
+  lastLoginAt_max: OrderDirection
+}
+"""
+✨ Generated data input type for table 'VerifiedRemedy'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input VerifiedRemedy_Data {
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `VerifiedRemedy`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`category` of type `String!`
+  """
+  category: String
+  """
+  ✨ `_expr` server value variant of `category` (✨ Generated from Field `VerifiedRemedy`.`category` of type `String!`)
+  """
+  category_expr: String_Expr
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp
+  """
+  ✨ `_expr` server value variant of `createdAt` (✨ Generated from Field `VerifiedRemedy`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_expr: Timestamp_Expr
+  """
+  ✨ `_time` server value variant of `createdAt` (✨ Generated from Field `VerifiedRemedy`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_time: Timestamp_Relative
+  """
+  ✨ `_update` server value variant of `createdAt` (✨ Generated from Field `VerifiedRemedy`.`createdAt` of type `Timestamp!`)
+  """
+  createdAt_update: [Timestamp_Update!]
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`description` of type `String!`
+  """
+  description: String
+  """
+  ✨ `_expr` server value variant of `description` (✨ Generated from Field `VerifiedRemedy`.`description` of type `String!`)
+  """
+  description_expr: String_Expr
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`ingredients` of type `String`
+  """
+  ingredients: String
+  """
+  ✨ `_expr` server value variant of `ingredients` (✨ Generated from Field `VerifiedRemedy`.`ingredients` of type `String`)
+  """
+  ingredients_expr: String_Expr
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`name` of type `String!`
+  """
+  name: String
+  """
+  ✨ `_expr` server value variant of `name` (✨ Generated from Field `VerifiedRemedy`.`name` of type `String!`)
+  """
+  name_expr: String_Expr
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`preparationInstructions` of type `String`
+  """
+  preparationInstructions: String
+  """
+  ✨ `_expr` server value variant of `preparationInstructions` (✨ Generated from Field `VerifiedRemedy`.`preparationInstructions` of type `String`)
+  """
+  preparationInstructions_expr: String_Expr
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`scientificEvidenceLink` of type `String`
+  """
+  scientificEvidenceLink: String
+  """
+  ✨ `_expr` server value variant of `scientificEvidenceLink` (✨ Generated from Field `VerifiedRemedy`.`scientificEvidenceLink` of type `String`)
+  """
+  scientificEvidenceLink_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'VerifiedRemedy'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input VerifiedRemedy_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [VerifiedRemedy_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: VerifiedRemedy_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [VerifiedRemedy_Filter!]
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`category` of type `String!`
+  """
+  category: String_Filter
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: Timestamp_Filter
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`description` of type `String!`
+  """
+  description: String_Filter
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`ingredients` of type `String`
+  """
+  ingredients: String_Filter
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`name` of type `String!`
+  """
+  name: String_Filter
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`preparationInstructions` of type `String`
+  """
+  preparationInstructions: String_Filter
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`scientificEvidenceLink` of type `String`
+  """
+  scientificEvidenceLink: String_Filter
+}
+"""
+✨ Generated first-row input type for table 'VerifiedRemedy'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input VerifiedRemedy_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [VerifiedRemedy_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: VerifiedRemedy_Filter
+}
+"""
+✨ Generated having input type for table 'VerifiedRemedy'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input VerifiedRemedy_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [VerifiedRemedy_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: VerifiedRemedy_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [VerifiedRemedy_Having!]
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`category_count` of type `Int!`
+  """
+  category_count: Int_Filter
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: Int_Filter
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`description_count` of type `Int!`
+  """
+  description_count: Int_Filter
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`ingredients_count` of type `Int!`
+  """
+  ingredients_count: Int_Filter
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`name_count` of type `Int!`
+  """
+  name_count: Int_Filter
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`preparationInstructions_count` of type `Int!`
+  """
+  preparationInstructions_count: Int_Filter
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`scientificEvidenceLink_count` of type `Int!`
+  """
+  scientificEvidenceLink_count: Int_Filter
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: Timestamp_Filter
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: Timestamp_Filter
+}
+"""
+✨ Generated key input type for table 'VerifiedRemedy'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input VerifiedRemedy_Key {
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `VerifiedRemedy`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'VerifiedRemedy'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input VerifiedRemedy_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: VerifiedRemedy_Filter
+}
+"""
+✨ Generated order input type for table 'VerifiedRemedy'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input VerifiedRemedy_Order {
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`category` of type `String!`
+  """
+  category: OrderDirection
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`createdAt` of type `Timestamp!`
+  """
+  createdAt: OrderDirection
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`description` of type `String!`
+  """
+  description: OrderDirection
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`ingredients` of type `String`
+  """
+  ingredients: OrderDirection
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`name` of type `String!`
+  """
+  name: OrderDirection
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`preparationInstructions` of type `String`
+  """
+  preparationInstructions: OrderDirection
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`scientificEvidenceLink` of type `String`
+  """
+  scientificEvidenceLink: OrderDirection
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`_count` of type `Int!`
+  """
+  _count: OrderDirection
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`category_count` of type `Int!`
+  """
+  category_count: OrderDirection
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`createdAt_count` of type `Int!`
+  """
+  createdAt_count: OrderDirection
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`description_count` of type `Int!`
+  """
+  description_count: OrderDirection
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`id_count` of type `Int!`
+  """
+  id_count: OrderDirection
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`ingredients_count` of type `Int!`
+  """
+  ingredients_count: OrderDirection
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`name_count` of type `Int!`
+  """
+  name_count: OrderDirection
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`preparationInstructions_count` of type `Int!`
+  """
+  preparationInstructions_count: OrderDirection
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`scientificEvidenceLink_count` of type `Int!`
+  """
+  scientificEvidenceLink_count: OrderDirection
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`createdAt_min` of type `Timestamp`
+  """
+  createdAt_min: OrderDirection
+  """
+  ✨ Generated from Field `VerifiedRemedy`.`createdAt_max` of type `Timestamp`
+  """
+  createdAt_max: OrderDirection
+}

@@ -1,0 +1,52 @@
+{
+  "fatigue+irregular periods": {
+    "condition": "Possible PCOS or Thyroid Issue",
+    "tip": "Track your cycle and consult a gynecologist",
+    "urgency": "Within a week"
+  },
+  "fatigue+dizziness": {
+    "condition": "Possible Anemia",
+    "tip": "Increase iron-rich foods like ragi and drumstick leaves",
+    "urgency": "Within a week"
+  },
+  "bloating+cramps": {
+    "condition": "Possible Menstrual Discomfort or IBS",
+    "tip": "Try ginger tea, avoid processed foods before periods",
+    "urgency": "Monitor for now"
+  },
+  "acne+weight gain": {
+    "condition": "Possible PCOS",
+    "tip": "Reduce sugar intake, consider seeing an endocrinologist",
+    "urgency": "Within a week"
+  },
+  "hair loss+weight gain": {
+    "condition": "Possible Thyroid Issue or PCOS",
+    "tip": "Get TSH levels tested",
+    "urgency": "Within a week"
+  },
+  "mood swings+bloating": {
+    "condition": "Possible PMS or PMDD",
+    "tip": "Track symptoms across your cycle for patterns",
+    "urgency": "Monitor for now"
+  },
+  "nausea+fatigue": {
+    "condition": "Possible Anemia or Nutritional Deficiency",
+    "tip": "Eat smaller frequent meals, increase B12 and iron intake",
+    "urgency": "Monitor for now"
+  },
+  "irregular periods+acne": {
+    "condition": "Possible Hormonal Imbalance or PCOS",
+    "tip": "Consult a gynecologist for hormone panel tests",
+    "urgency": "Within a week"
+  },
+  "back pain+cramps": {
+    "condition": "Possible Endometriosis or Menstrual Pain",
+    "tip": "Apply heat, try ginger tea, see doctor if severe",
+    "urgency": "Monitor for now"
+  },
+  "headache+fatigue": {
+    "condition": "Possible Anemia or Dehydration",
+    "tip": "Increase water intake, check hemoglobin levels",
+    "urgency": "Monitor for now"
+  }
+}
